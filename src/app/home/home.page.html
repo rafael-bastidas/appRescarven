@@ -1,0 +1,64 @@
+<ion-header style="background: #e8e8e8;">
+  <ion-toolbar>
+    <ion-img src="../../assets/logo-rescarven-2.png" style="padding: 10px 5px;"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div style="position: relative;">
+    <ion-img src="https://www.rescarven.com/static/banner-home-245c0a3f025b7ef194736b5e3b7b0bae.png"></ion-img>
+    <div style="position: absolute; top: 12%; left: 7%;">
+      <ion-text style="font-weight: bold;">La organización rescarven</ion-text><br>
+      <ion-text style="font-size: x-small;">se ha consolidado como la empresa líder</ion-text><br>
+      <ion-text style="font-size: x-small;">en la atención integral a la salud del</ion-text><br>
+      <ion-text style="font-size: x-small;">venezolano, cumpliendo con los más altos</ion-text><br>
+      <ion-text style="font-size: x-small;">estándares de calidad y profesionalismo.</ion-text>
+    </div>
+  </div>
+
+  <div id="container" style="margin-top: 40px;">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Nombre y apellido:</ion-label>
+            <ion-input [formControl]="name" inputmode="text"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label position="floating">Telefono:</ion-label>
+            <ion-input [formControl]="phone" inputmode="number"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label position="floating">Cedula:</ion-label>
+            <ion-input [formControl]="DNI" inputmode="number"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row style="margin-top: 40px;">
+        <ion-col>
+          <ion-button shape="round" (click)="presentLoading()">Solicitar asistencia</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-img src="../../assets/footer-bg.png"></ion-img>
+  </ion-toolbar>
+</ion-footer>
+
+
+<!-- Esto centra la informacion en la pantalla
+
+<div id="container">
+    <img src="../../assets/logo-rescarven.png" alt="">
+    <strong>Ready to create an app?</strong>
+    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+</div>
+
+-->

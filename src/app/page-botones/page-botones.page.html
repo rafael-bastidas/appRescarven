@@ -1,0 +1,150 @@
+<ion-header style="background: #e8e8e8;">
+  <ion-toolbar>
+    <ion-img src="../../assets/logo-rescarven-2.png" style="padding: 10px 5px;"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Imagen de cabezara
+  <ion-img src="https://www.rescarven.com/static/banner-home-245c0a3f025b7ef194736b5e3b7b0bae.png"></ion-img>
+  <ion-text style="position: absolute; top: 12%; left: 5%; font-weight: bold;">La organización rescarven</ion-text>
+  <ion-text style="position: absolute; top: 16%; left: 7%; font-size: x-small;">se ha consolidado como la empresa líder</ion-text>
+  <ion-text style="position: absolute; top: 18%; left: 7%; font-size: x-small;">en la atención integral a la salud del</ion-text>
+  <ion-text style="position: absolute; top: 20%; left: 7%; font-size: x-small;">venezolano, cumpliendo con los más altos</ion-text>
+  <ion-text style="position: absolute; top: 22%; left: 7%; font-size: x-small;">estándares de calidad y profesionalismo.</ion-text>
+  -->
+
+  <div id="container" style="margin-top: 20px;">
+    <!--MENU OPCION #01
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" style="text-align: center;">
+          <ion-card button="true">
+            <img src="../../assets/btn-asistencia-domiciliaria.png"/>
+            <ion-card-content>
+              Asistencia Médica Domiciliaria
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6" style="text-align: center;">
+          <ion-card button="true">
+            <img src="../../assets/btn-teleasistencia.png"/>
+            <ion-card-content>
+              Asistencia Médica Remota
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" style="text-align: center;">
+          <ion-card button="true">
+            <img src="../../assets/btn-traslado-en-ambulancia.png"/>
+            <ion-card-content>
+              Traslado en Ambulancia
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6" style="text-align: center;">
+          <ion-card button="true" href="https://www.rescarven.com" target="_blank">
+            <img src="../../assets/btn-information.png"/>
+            <ion-card-content>
+              Solicitud de Información
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col style="text-align: center;">
+          <ion-chip color="danger" outline="true">
+            <ion-icon name="call" color="danger"></ion-icon>
+            <ion-title color="danger">Emergencia</ion-title>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    -->
+
+    <!--MENU OPCION #02-->
+    <ion-card button="true" (click)="peticion('Asistencia Domiciliaria')">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4" style="text-align: center; align-self: center;"> 
+            <img src="../../assets/btn-asistencia-domiciliaria.png"/>
+          </ion-col>
+          <ion-col style="text-align: start;">
+            <ion-card-header>
+              <ion-card-title style="color: #8c8c8c;">Asistencia Médica Domiciliaria</ion-card-title>
+            </ion-card-header>
+          </ion-col>
+        </ion-row>
+      </ion-grid>  
+    </ion-card>
+
+    <ion-card button="true" (click)="peticion('Traslado en Ambulancia')">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4" style="text-align: center; align-self: center;"> 
+            <img src="../../assets/btn-traslado-en-ambulancia.png" />
+          </ion-col>
+          <ion-col style="text-align: start;">
+            <ion-card-header>
+              <ion-card-title style="color: #8c8c8c;">Traslado en Ambulancia</ion-card-title>
+            </ion-card-header>
+          </ion-col>
+        </ion-row>
+      </ion-grid>  
+    </ion-card>
+
+    <ion-card button="true" (click)="peticion('Asistencia Remota')">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4" style="text-align: center; align-self: center;"> 
+            <img src="../../assets/btn-teleasistencia.png" />
+          </ion-col>
+          <ion-col style="text-align: start;">
+            <ion-card-header>
+              <ion-card-title style="color: #8c8c8c;">Asistencia Médica Remota</ion-card-title>
+            </ion-card-header>
+          </ion-col>
+        </ion-row>
+      </ion-grid>  
+    </ion-card>
+
+    <ion-card button="true" href="https://www.rescarven.com" target="_blank">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4" style="text-align: center;  align-self: center;"> 
+            <img src="../../assets/btn-information.png" />
+          </ion-col>
+          <ion-col style="text-align: start;">
+            <ion-card-header>
+              <ion-card-title style="color: #8c8c8c;">Solicitud de Información</ion-card-title>
+            </ion-card-header>
+          </ion-col>
+        </ion-row>
+      </ion-grid>  
+    </ion-card>
+
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar style="background: #e8e8e8;">
+    <!--<ion-img src="../../assets/footer-bg-2.png" style="position: absolute; bottom: 0px; left: 0px;"></ion-img>-->
+    <ion-grid>
+      <ion-row>
+        <ion-col style="text-align: center;">
+          <ion-chip (click)="callToRescarven()" color="danger" outline="true">
+            <ion-icon name="call" color="danger"></ion-icon>
+            <ion-title color="danger">Emergencia</ion-title>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

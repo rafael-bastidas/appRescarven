@@ -1,0 +1,6 @@
+{
+	"appId": "com.rescarven.rb",
+	"appName": "RESCARVEN",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
